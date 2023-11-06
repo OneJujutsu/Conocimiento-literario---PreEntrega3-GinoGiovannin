@@ -1,0 +1,122 @@
+@mixin parametros-margin ($arriva, $derecha, $izquierda, $abajo) {
+    margin:$arriva $derecha $izquierda $abajo ;
+}
+
+@mixin parametros-padding ($arriva, $derecha, $izquierda, $abajo) {
+    padding:$arriva $derecha $izquierda $abajo ;
+}
+
+@mixin altura-ancho ($altura, $ancho){
+    height: $altura;
+    width: $ancho;
+}
+
+@mixin flex-organizacion ($fle-dir, $fle-wra, $ali-con, $jus-con, $ali-ite) {
+    display: flex;
+    flex-direction: $fle-dir;
+    flex-wrap: $fle-wra;
+    align-content: $ali-con;
+    justify-content: $jus-con;
+    align-items: $ali-ite;
+}
+
+@mixin grid-organizacion ($ali-con, $jus-con, $ali-ite, $jus-ite) {
+    display: grid;
+    align-content: $ali-con;
+    justify-content: $jus-con;
+    align-items: $ali-ite;
+    justify-items: $jus-ite;
+}
+
+
+
+.primera-seccion{
+    @include flex-organizacion(column, nowrap, normal, normal, normal);
+    @include parametros-margin(70px, 0px, 0px, 8%);
+        h1{font-size: 30px;
+        }
+}
+
+
+
+.grid-seccion{
+    @include grid-organizacion(space-around, space-evenly, normal, center);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    .contenedor-principal{
+        border: 2px solid #ffffff;
+        @include parametros-margin(50px, 0px, 0px, 0px);
+        @include altura-ancho(auto, auto);
+        .card-link{
+            @include parametros-padding(0%, 0%, 0%, 0%);
+            @include parametros-margin(0%, 0%, 0%, 0%);
+            text-decoration:none;
+            .nombre-titular{
+                color: white;
+                text-align: center ;
+                @include parametros-margin(0%, 0%, 0%, 0%);
+                border: 2px solid  #ffffff ;
+                background: rgb(27,38,105);
+                background: radial-gradient(circle, rgba(27,38,105,1) 0%, rgba(0,29,36,1) 64%);
+                font-size: 20px;
+                position: relative;
+                overflow: hidden;
+            }
+            .card-container{
+                @include flex-organizacion(row, nowrap, normal, normal, center);
+                color: #fff;
+                background-color: rgb(18, 4, 20);
+                width: 590px;
+                .card-img-autor{
+                    @include altura-ancho (330px, 243px);
+                    @include parametros-margin(62px, 10px, 10px, 10px)
+                }
+                .card-autor {
+                    @include flex-organizacion(column, nowrap, normal, space-evenly, normal);
+                    @include altura-ancho(auto, 333px);
+                    .texto-introductorio-del-autor{
+                        font-size: small;
+                        .texto-oda{
+                            @include parametros-margin(0%, 7px, 0%, 0%);
+                            text-align: justify;
+                            height: 105px;
+                            overflow: hidden;
+                        }
+                    }
+                    .card-obra{
+                        @include flex-organizacion(row, nowrap, normal, normal, normal);
+                        gap: 10px;
+                        @include altura-ancho(auto, auto);
+                        transition: all 0.5s linear;
+                        .obra-mas-conocida-del-autor{
+                            @include altura-ancho(235px, 150px);
+                            @include parametros-margin(45px, 0%, 0%, 0%);
+                        }
+                        .contenedor-texto-de-obra{
+                            background-color: rgb(18, 4, 20);
+                            transition: all 0.5s linear;
+                            &:hover{
+                                @include altura-ancho(285px, 327px);
+                                overflow: visible;
+                                position: absolute;
+                            }
+                            .nombre-de-la-obra{
+                                @include parametros-margin(18px, 0%, 10px, 7px);
+                                @include altura-ancho(18px, auto);
+                                overflow: hidden;
+                            }
+                            .argumento-de-la-obra{
+                                font-size: small;
+                                text-align: justify;
+                                @include parametros-margin(10px, 7px, 0px, 7px);
+                                @include altura-ancho(240px, auto);
+                                overflow: hidden;
+                            }                            
+                        }                        
+                    }
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,73 @@
+@mixin parametros-margin ($arriva, $derecha, $izquierda, $abajo) {
+    margin:$arriva $derecha $izquierda $abajo ;
+}
+
+@mixin parametros-padding ($arriva, $derecha, $izquierda, $abajo) {
+    padding:$arriva $derecha $izquierda $abajo ;
+}
+
+@mixin altura-ancho ($altura, $ancho){
+    height: $altura;
+    width: $ancho;
+}
+
+@mixin flex-organizacion ($fle-dir, $fle-wra, $ali-con, $jus-con, $ali-ite) {
+    display: flex;
+    flex-direction: $fle-dir;
+    flex-wrap: $fle-wra;
+    align-content: $ali-con;
+    justify-content: $jus-con;
+    align-items: $ali-ite;
+}
+
+@mixin grid-organizacion ($ali-con, $jus-con, $ali-ite, $jus-ite) {
+    display: grid;
+    align-content: $ali-con;
+    justify-content: $jus-con;
+    align-items: $ali-ite;
+    justify-items: $jus-ite;
+}
+
+.card-container---tertulia{
+    @include flex-organizacion(row, nowrap, normal, normal, normal);
+    @include altura-ancho(auto, 580px);
+    background-color: rgb(18, 4, 20);
+    color: #fff;
+    align-items: center;
+    .card-img-obra-comentarista---tertulia{
+        @include flex-organizacion(column, nowrap, normal, space-evenly, normal);
+        .card-imgs-reseña---tertulia{
+            @include flex-organizacion(row, nowrap, normal, normal, flex-end);
+            @include parametros-padding(0px, 10px, 0px, 10px);
+            .card-img-comentarista---tertulia{
+                @include altura-ancho(200px, 125px);
+            }
+            .card-img-obra---tertulia{
+                @include altura-ancho(110px, 110px);
+            }
+        }
+        .card-img-likes---tertulia{
+            @include flex-organizacion(row, nowrap, normal, space-around, normal);
+            @include parametros-padding(15px, 10px, 0px, 0px);
+            .card-likes{
+                @include altura-ancho(66px, 66px);
+            }
+            .card-comentarios{
+                @include parametros-padding(0px, 25px, 0px, 0px);
+                @include altura-ancho(66px, 66px);
+            }
+        }
+    }
+    .card-reseña---tertulia{
+        @include parametros-margin(0px, 5px, 0px, 0px);
+        @include altura-ancho(310px, auto);
+        text-align: justify;
+        font-size: small;
+        overflow: hidden;
+    }
+}
+
+
+
+
+

@@ -1,0 +1,67 @@
+@mixin parametros-margin ($arriva, $derecha, $izquierda, $abajo) {
+    margin:$arriva $derecha $izquierda $abajo ;
+}
+
+@mixin parametros-padding ($arriva, $derecha, $izquierda, $abajo) {
+    padding:$arriva $derecha $izquierda $abajo ;
+}
+
+@mixin altura-ancho ($altura, $ancho){
+    height: $altura;
+    width: $ancho;
+}
+
+@mixin flex-organizacion ($fle-dir, $fle-wra, $ali-con, $jus-con, $ali-ite) {
+    display: flex;
+    flex-direction: $fle-dir;
+    flex-wrap: $fle-wra;
+    align-content: $ali-con;
+    justify-content: $jus-con;
+    align-items: $ali-ite;
+}
+
+
+.retrato {
+    @include parametros-margin(0%, 0%, 0%, 0%);
+    @include parametros-padding(0%, 40%, 0%, 40%);
+    @include flex-organizacion(row, nowrap, normal, space-around, normal)
+}
+
+h1 {
+    color: antiquewhite;
+    display: block;
+    font-size: 4em;
+    text-align: center;
+    }
+
+h2{
+    color: aliceblue;
+    text-align: center;
+    @include parametros-margin(100px, 0px, 100px, 0px);
+}
+
+.primerparrafo{
+    font-size: 20px;
+    text-align: justify;
+    @include parametros-padding(0px, 100px, 0px, 100px);
+}
+
+#carouselExampleCaptions{
+    margin: auto;
+    width: 500px;
+}
+
+.carousel-caption{
+    bottom: 10px;
+    padding-bottom: 0%;
+}
+
+.carousel-caption h5 {
+    color: #140c01;
+    font-size: 30px;
+}
+
+.carousel-caption p {
+    color: #140c01;
+    font-size: 25px;
+}

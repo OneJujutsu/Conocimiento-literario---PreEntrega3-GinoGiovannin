@@ -1,0 +1,675 @@
+@charset "UTF-8";
+body {
+  margin: 0%;
+  padding: 0%;
+  font-family: "Roboto", sans-serif;
+  background-color: rgb(20, 12, 1);
+  line-height: normal;
+}
+
+p {
+  color: white;
+}
+
+header {
+  padding: 20px 10px 20px 10px;
+  background-color: rgb(26, 24, 44);
+  border: 10px solid black;
+  text-align: center;
+}
+header nav {
+  display: block;
+}
+header nav ul {
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+header nav ul .card-links-header {
+  display: inline-block;
+  color: white;
+}
+header nav ul .card-links-header a {
+  text-decoration: none;
+  font-size: 30px;
+  padding: 10px 10px 10px 10px;
+  background-color: gray;
+  color: azure;
+}
+
+.apariencia-barra-de-busqueda input {
+  padding: 9px 50% 9px 32px;
+  margin: 0px 0px 20px 0px;
+  outline: none;
+  font-size: 18px;
+  border-radius: 30px;
+  color: #444;
+  border: 3px solid #a50559;
+}
+
+.tipo-de-obra {
+  margin: 0px 0px 0px 120px;
+}
+
+.row {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: normal;
+  justify-content: normal;
+  align-items: normal;
+}
+
+.tipo-de-obra select {
+  font-size: 18px;
+  padding: 5px 20px 5px 5px;
+  border-radius: 10px;
+  margin: 0px 20px 0px 0px;
+}
+
+.sub-generos select {
+  font-size: 18px;
+  padding: 5px 20px 5px 5px;
+  border-radius: 10px;
+}
+
+.contenedor-principal {
+  border: 2px solid #ffffff;
+  margin: 50px 0px 0px 0px;
+  height: auto;
+  width: auto;
+}
+
+.card-numeraciones {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: normal;
+  justify-content: center;
+  align-items: normal;
+  margin: 70px 0% 0% 0%;
+}
+.card-numeraciones ol {
+  padding: 0% 0% 0% 0%;
+}
+.card-numeraciones ol li {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 30px;
+  padding: 10px 10px 10px 10px;
+  background-color: gray;
+  color: azure;
+}
+.card-numeraciones ol li a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.div-contenedor-de-redes-sociales {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: normal;
+  justify-content: flex-start;
+  align-items: normal;
+  margin: 130px 0% 0% 0%;
+  padding: 0px 0px 10px 0px;
+  color: white;
+  background-color: black;
+}
+.div-contenedor-de-redes-sociales .card-div-footer-textos {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: normal;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.retrato {
+  margin: 0% 0% 0% 0%;
+  padding: 0% 40% 0% 40%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: normal;
+  justify-content: space-around;
+  align-items: normal;
+}
+
+h1 {
+  color: antiquewhite;
+  display: block;
+  font-size: 4em;
+  text-align: center;
+}
+
+h2 {
+  color: aliceblue;
+  text-align: center;
+  margin: 100px 0px 100px 0px;
+}
+
+.primerparrafo {
+  font-size: 20px;
+  text-align: justify;
+  padding: 0px 100px 0px 100px;
+}
+
+#carouselExampleCaptions {
+  margin: auto;
+  width: 500px;
+}
+
+.carousel-caption {
+  bottom: 10px;
+  padding-bottom: 0%;
+}
+
+.carousel-caption h5 {
+  color: #140c01;
+  font-size: 30px;
+}
+
+.carousel-caption p {
+  color: #140c01;
+  font-size: 25px;
+}
+
+.primera-seccion {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: normal;
+  justify-content: normal;
+  align-items: normal;
+  margin: 70px 0px 0px 8%;
+}
+.primera-seccion h1 {
+  font-size: 30px;
+}
+
+.grid-seccion {
+  display: grid;
+  align-content: space-around;
+  justify-content: space-evenly;
+  align-items: normal;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.grid-seccion .contenedor-principal {
+  border: 2px solid #ffffff;
+  margin: 50px 0px 0px 0px;
+  height: auto;
+  width: auto;
+}
+.grid-seccion .contenedor-principal .card-link {
+  padding: 0% 0% 0% 0%;
+  margin: 0% 0% 0% 0%;
+  text-decoration: none;
+}
+.grid-seccion .contenedor-principal .card-link .nombre-titular {
+  color: white;
+  text-align: center;
+  margin: 0% 0% 0% 0%;
+  border: 2px solid #ffffff;
+  background: rgb(27, 38, 105);
+  background: radial-gradient(circle, rgb(27, 38, 105) 0%, rgb(0, 29, 36) 64%);
+  font-size: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.grid-seccion .contenedor-principal .card-link .card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: normal;
+  justify-content: normal;
+  align-items: center;
+  color: #fff;
+  background-color: rgb(18, 4, 20);
+  width: 590px;
+}
+.grid-seccion .contenedor-principal .card-link .card-container .card-img-autor {
+  height: 330px;
+  width: 243px;
+  margin: 62px 10px 10px 10px;
+}
+.grid-seccion .contenedor-principal .card-link .card-container .card-autor {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: normal;
+  justify-content: space-evenly;
+  align-items: normal;
+  height: auto;
+  width: 333px;
+}
+.grid-seccion .contenedor-principal .card-link .card-container .card-autor .texto-introductorio-del-autor {
+  font-size: small;
+}
+.grid-seccion .contenedor-principal .card-link .card-container .card-autor .texto-introductorio-del-autor .texto-oda {
+  margin: 0% 7px 0% 0%;
+  text-align: justify;
+  height: 105px;
+  overflow: hidden;
+}
+.grid-seccion .contenedor-principal .card-link .card-container .card-autor .card-obra {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: normal;
+  justify-content: normal;
+  align-items: normal;
+  gap: 10px;
+  height: auto;
+  width: auto;
+  transition: all 0.5s linear;
+}
+.grid-seccion .contenedor-principal .card-link .card-container .card-autor .card-obra .obra-mas-conocida-del-autor {
+  height: 235px;
+  width: 150px;
+  margin: 45px 0% 0% 0%;
+}
+.grid-seccion .contenedor-principal .card-link .card-container .card-autor .card-obra .contenedor-texto-de-obra {
+  background-color: rgb(18, 4, 20);
+  transition: all 0.5s linear;
+}
+.grid-seccion .contenedor-principal .card-link .card-container .card-autor .card-obra .contenedor-texto-de-obra:hover {
+  height: 285px;
+  width: 327px;
+  overflow: visible;
+  position: absolute;
+}
+.grid-seccion .contenedor-principal .card-link .card-container .card-autor .card-obra .contenedor-texto-de-obra .nombre-de-la-obra {
+  margin: 18px 0% 10px 7px;
+  height: 18px;
+  width: auto;
+  overflow: hidden;
+}
+.grid-seccion .contenedor-principal .card-link .card-container .card-autor .card-obra .contenedor-texto-de-obra .argumento-de-la-obra {
+  font-size: small;
+  text-align: justify;
+  margin: 10px 7px 0px 7px;
+  height: 240px;
+  width: auto;
+  overflow: hidden;
+}
+
+.card-container {
+  display: flex;
+  color: #fff;
+  align-items: center;
+  height: 395px;
+  width: auto;
+  background-color: rgb(18, 4, 20);
+}
+.card-container .card-img-autor---obras {
+  height: 373px;
+  width: 243px;
+  margin: 10px 10px 10px 10px;
+}
+.card-container .card-contenedor {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: normal;
+  justify-content: flex-start;
+  align-items: normal;
+  height: 395px;
+  width: 368px;
+  text-decoration: none;
+}
+.card-container .card-contenedor .argumento-de-la-obra---obras {
+  font-size: small;
+  text-align: justify;
+  margin: 10px 10px 10px 0px;
+  height: 60%;
+  width: auto;
+  overflow: hidden;
+}
+
+.rating {
+  display: inline-block;
+}
+.rating input {
+  display: none;
+}
+.rating label {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.rating label:before {
+  content: "★";
+}
+
+.rating input:checked ~ label:before {
+  content: "★";
+  color: gold;
+}
+
+.card-container---tertulia {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: normal;
+  justify-content: normal;
+  align-items: normal;
+  height: auto;
+  width: 580px;
+  background-color: rgb(18, 4, 20);
+  color: #fff;
+  align-items: center;
+}
+.card-container---tertulia .card-img-obra-comentarista---tertulia {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: normal;
+  justify-content: space-evenly;
+  align-items: normal;
+}
+.card-container---tertulia .card-img-obra-comentarista---tertulia .card-imgs-reseña---tertulia {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: normal;
+  justify-content: normal;
+  align-items: flex-end;
+  padding: 0px 10px 0px 10px;
+}
+.card-container---tertulia .card-img-obra-comentarista---tertulia .card-imgs-reseña---tertulia .card-img-comentarista---tertulia {
+  height: 200px;
+  width: 125px;
+}
+.card-container---tertulia .card-img-obra-comentarista---tertulia .card-imgs-reseña---tertulia .card-img-obra---tertulia {
+  height: 110px;
+  width: 110px;
+}
+.card-container---tertulia .card-img-obra-comentarista---tertulia .card-img-likes---tertulia {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: normal;
+  justify-content: space-around;
+  align-items: normal;
+  padding: 15px 10px 0px 0px;
+}
+.card-container---tertulia .card-img-obra-comentarista---tertulia .card-img-likes---tertulia .card-likes {
+  height: 66px;
+  width: 66px;
+}
+.card-container---tertulia .card-img-obra-comentarista---tertulia .card-img-likes---tertulia .card-comentarios {
+  padding: 0px 25px 0px 0px;
+  height: 66px;
+  width: 66px;
+}
+.card-container---tertulia .card-reseña---tertulia {
+  margin: 0px 5px 0px 0px;
+  height: 310px;
+  width: auto;
+  text-align: justify;
+  font-size: small;
+  overflow: hidden;
+}
+
+.introducion-al-registro {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: normal;
+  justify-content: normal;
+  align-items: center;
+  margin: 50px 20px 0px 20px;
+  text-align: justify;
+  font-size: 20px;
+}
+
+.card-registro {
+  height: 100%;
+  width: 700px;
+  margin: 40px auto auto auto;
+  border-radius: 10px;
+  background: #2a292e;
+}
+.card-registro h1 {
+  font-size: 40px;
+  padding: 25px;
+  text-align: center;
+  color: #140c01;
+}
+.card-registro .card-datos---registrarse {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: normal;
+  justify-content: normal;
+  align-items: normal;
+  height: auto;
+  width: 470px;
+  margin: auto;
+}
+.card-registro .card-datos---registrarse input {
+  margin: 50px 0px 50px 0px;
+}
+.card-registro .card-datos-final---registrarse {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: normal;
+  justify-content: normal;
+  align-items: center;
+}
+.card-registro .card-datos-final---registrarse label {
+  text-align: center;
+  font-size: 20px;
+  color: #140c01;
+}
+.card-registro .card-datos-final---registrarse a {
+  text-decoration: none;
+  color: #2957ba;
+}
+.card-registro .card-datos-final---registrarse .boton {
+  height: auto;
+  width: 50%;
+  margin: 15px 15px 15px 15px;
+  padding: 15px 15px 15px 15px;
+  border: none;
+  border-radius: 100px;
+  font-size: 15px;
+  color: white;
+  background: #e44a0d;
+}
+.card-registro .card-datos-final---registrarse .card-cuenta-registrada {
+  height: auto;
+  width: 30%;
+  text-align: center;
+  font-size: 20px;
+  color: #140c01;
+  background: #fff;
+}
+
+.form-label {
+  color: #140c01;
+}
+
+.form-text {
+  color: #140c01;
+}
+
+#exampleInputEmail1 {
+  margin: 0%;
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .retrato {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 40% 0px 40%;
+    border: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: normal;
+    justify-content: space-around;
+    align-items: normal;
+  }
+  .primerparrafo {
+    font-size: 20px;
+    text-align: justify;
+    padding: 0px 30px 0px 30px;
+  }
+  .card-texto-introductorio {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: normal;
+    justify-content: normal;
+    align-items: normal;
+  }
+  header nav ul .card-links-header a {
+    font-size: 25px;
+    padding: 8px 8px 8px 8px;
+  }
+  .primera-seccion {
+    margin: 69px 0px 0px 2%;
+  }
+  .row {
+    flex-wrap: nowrap;
+    height: auto;
+    width: 70%;
+  }
+  .tipo-de-obra {
+    margin: 0px 0px 0px 4%;
+  }
+  .grid-seccion {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  .grid-seccion .contenedor-principal .card-link .card-container {
+    height: auto;
+    width: 555px;
+  }
+  .card-registro {
+    height: auto;
+    width: 550px;
+  }
+  .card-div-footer-textos {
+    font-size: 12px;
+  }
+  .grid-seccion .contenedor-principal .card-link .nombre-titular {
+    position: static;
+  }
+  .card-obra {
+    margin: 0px 0px 0px 67px;
+    position: relative;
+  }
+  .card-obra .contenedor-texto-de-obra {
+    display: none;
+    position: absolute;
+    top: 276px;
+    right: 1px;
+    height: 240px;
+    width: 554px;
+  }
+  #imagen:hover + #contenedor-texto-de-obra {
+    display: block;
+  }
+  .obra-mas-conocida-del-autor {
+    position: absolute;
+  }
+  .contenedor-texto-de-obra {
+    height: 286px;
+    width: 150px;
+  }
+  .grid-seccion .contenedor-principal .card-link .card-container .card-autor .card-obra .contenedor-texto-de-obra .nombre-de-la-obra {
+    margin: 18px 0% 10px 38px;
+  }
+  .card-autor {
+    margin: 0px 0px 283px 0px;
+  }
+  #contenedor-de-tertulia {
+    height: auto;
+    width: 562px;
+  }
+  .card-container---tertulia {
+    height: auto;
+    width: 558px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .primerparrafo {
+    font-size: 20px;
+    text-align: justify;
+    padding: 0px 30px 0px 30px;
+  }
+  .primera-seccion {
+    margin: 69px 0px 0px 2%;
+  }
+  .row {
+    flex-wrap: nowrap;
+    height: auto;
+    width: 70%;
+  }
+  .tipo-de-obra {
+    margin: 0px 0px 0px 4%;
+  }
+  .grid-seccion {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  .card-container---tertulia {
+    height: auto;
+    width: 740px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .grid-seccion .contenedor-principal .card-link .card-container {
+    height: auto;
+    width: 470px;
+  }
+  .grid-seccion .contenedor-principal .card-link .nombre-titular {
+    position: static;
+  }
+  .card-obra {
+    margin: 0px 0px 0px 24px;
+  }
+  .obra-mas-conocida-del-autor {
+    position: absolute;
+  }
+  .contenedor-texto-de-obra {
+    height: 286px;
+    width: 150px;
+  }
+  .grid-seccion .contenedor-principal .card-link .card-container .card-autor .card-obra .contenedor-texto-de-obra .nombre-de-la-obra {
+    margin: 18px 0% 10px 38px;
+  }
+  .card-autor {
+    margin: 0px 0px 283px 0px;
+  }
+  .card-obra {
+    position: relative;
+  }
+  .card-obra .contenedor-texto-de-obra {
+    display: none;
+    position: absolute;
+    top: 276px;
+    right: 1px;
+    height: 240px;
+    width: 459px;
+  }
+  #imagen:hover + #contenedor-texto-de-obra {
+    display: block;
+  }
+  #grid-tertulia {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  .card-container---tertulia {
+    height: auto;
+    width: 930px;
+  }
+}
+
+/*# sourceMappingURL=sass.css.map */

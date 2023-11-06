@@ -1,0 +1,147 @@
+@mixin parametros-margin ($arriva, $derecha, $izquierda, $abajo) {
+    margin:$arriva $derecha $izquierda $abajo ;
+}
+
+@mixin parametros-padding ($arriva, $derecha, $izquierda, $abajo) {
+    padding:$arriva $derecha $izquierda $abajo ;
+}
+
+@mixin altura-ancho ($altura, $ancho){
+    height: $altura;
+    width: $ancho;
+}
+
+@mixin flex-organizacion ($fle-dir, $fle-wra, $ali-con, $jus-con, $ali-ite) {
+    display: flex;
+    flex-direction: $fle-dir;
+    flex-wrap: $fle-wra;
+    align-content: $ali-con;
+    justify-content: $jus-con;
+    align-items: $ali-ite;
+}
+
+@mixin grid-organizacion ($ali-con, $jus-con, $ali-ite, $jus-ite) {
+    display: grid;
+    align-content: $ali-con;
+    justify-content: $jus-con;
+    align-items: $ali-ite;
+    justify-items: $jus-ite;
+}
+
+body {
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(20, 12, 1);
+    line-height: normal;
+}
+
+p{
+    color: white;
+}
+
+header {
+    @include parametros-padding (20px, 10px, 20px, 10px);
+    background-color: rgb(26, 24, 44);
+    border: 10px solid black;
+    text-align: center;
+        nav{
+            display: block;
+                ul{
+                    @include parametros-padding(0px, 0px, 0px, 0px);
+                    @include parametros-margin(0px, 0px, 0px, 0px);
+                    .card-links-header{
+                        display: inline-block;
+                        color: white;
+                            a{
+                                text-decoration:none;
+                                font-size:30px;
+                                @include parametros-padding(10px, 10px, 10px, 10px);
+                                background-color: gray;
+                                color: azure;
+                            }
+                    }
+                }
+        }
+}
+
+.apariencia-barra-de-busqueda input{
+    @include parametros-padding(9px, 50%, 9px, 32px);
+    @include parametros-margin(0px, 0px, 20px, 0px);
+    outline: none;
+    font-size: 18px;
+    border-radius: 30px;
+    color: #444;
+    border: 3px solid #a50559;
+}
+
+.tipo-de-obra{
+    @include parametros-margin(0px, 0px, 0px, 120px);
+}
+
+.row{
+    width:80%;
+    @include flex-organizacion(row, nowrap, normal, normal, normal);
+}
+
+.tipo-de-obra select{
+    font-size: 18px;
+    @include parametros-padding(5px, 20px, 5px, 5px);
+    border-radius: 10px;
+    @include parametros-margin(0px, 20px, 0px, 0px);
+}
+
+.sub-generos select{
+    font-size: 18px;
+    @include parametros-padding(5px, 20px, 5px, 5px);
+    border-radius: 10px;
+}
+
+.contenedor-principal{
+    border: 2px solid #ffffff;
+    @include parametros-margin(50px, 0px, 0px, 0px);
+    @include altura-ancho(auto, auto);
+}
+
+.card-numeraciones{
+    @include flex-organizacion(row, nowrap, normal, center, normal);
+    @include parametros-margin(70px, 0%, 0%, 0%);
+    ol{
+        @include parametros-padding(0%, 0%, 0%, 0%);
+        li {
+            display: inline-block;
+            text-decoration:none;
+            font-size:30px;
+            @include parametros-padding(10px, 10px, 10px, 10px);
+            background-color: gray;
+            color: azure;
+            a {
+                color: #000000;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.div-contenedor-de-redes-sociales{
+    @include flex-organizacion(row, nowrap, normal, flex-start, normal);
+    @include parametros-margin(130px, 0%, 0%, 0%);
+    @include parametros-padding(0px, 0px, 10px, 0px);
+    color: white;
+    background-color: black;
+    .card-div-footer-textos{
+        @include flex-organizacion(column, nowrap, normal, space-evenly, flex-start);
+    }
+}
+
+@import "index.scss";
+
+@import "autores.scss";
+
+@import "obras.scss";
+
+@import "tertulia.scss";
+
+@import "registrarse.scss";
+
+@import "mediaquery.scss"
