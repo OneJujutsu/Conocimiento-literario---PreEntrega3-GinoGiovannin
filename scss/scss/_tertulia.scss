@@ -28,6 +28,17 @@
     justify-items: $jus-ite;
 }
 
+.grid-seccion .contenedor-principal .card-link .nombre-titular---tertulia {
+    color: white;
+    text-align: center ;
+    @include parametros-margin(0%, 0%, 0%, 0%);
+    border: 2px solid  #ffffff ;
+    background: rgb(27,38,105);
+    background: radial-gradient(circle, rgba(27,38,105,1) 0%, rgba(0,29,36,1) 64%);
+    font-size: 20px;
+    position: relative;
+    overflow: hidden;
+}
 .card-container---tertulia{
     @include flex-organizacion(row, nowrap, normal, normal, normal);
     @include altura-ancho(auto, 580px);

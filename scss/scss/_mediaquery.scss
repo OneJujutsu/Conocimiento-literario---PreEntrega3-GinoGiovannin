@@ -28,6 +28,136 @@
     justify-items: $jus-ite;
 }
 
+@media (min-width: 380px) and (max-width: 575px){
+
+    header nav ul .card-links-header {
+        @include parametros-padding(15px, 15px, 15px, 15px);
+        a {
+            font-size: 22px;
+            @include parametros-padding(9px, 9px, 9px, 9px);
+        }
+}
+
+    h1{
+        font-size: 3em;
+    }
+
+    .retrato {
+        @include parametros-margin(0px, 0px, 0px, 0px);
+        @include parametros-padding(0px, 40%, 0px, 40%);
+        border: 10px;
+        @include flex-organizacion(row, nowrap, normal, space-around, normal);
+    }
+
+    .primerparrafo{
+        @include parametros-padding(30px, 30px, 0px, 30px);
+    }
+
+    #carouselExampleCaptions{
+        @include altura-ancho(auto, 300px);
+    }
+
+    .grid-seccion{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .primera-seccion{
+        @include parametros-margin(70px, 0px, 0px, 2%);
+    }
+
+    .apariencia-barra-de-busqueda input {
+        @include parametros-padding( 9px, 27%, 9px, 32px);
+    }
+
+    .tipo-de-obra {
+        @include parametros-margin(0px, 0px, 0px, 10px);
+    }
+
+    .row{
+        flex-wrap: nowrap;
+        @include altura-ancho(auto, 50%);
+    }
+
+    .grid-seccion .contenedor-principal .card-link .card-container {
+        @include altura-ancho(auto, auto);
+        @include flex-organizacion(column, nowrap, normal, normal, center);
+    }
+
+    .card-registro{
+        @include altura-ancho(auto, 550px);
+    }
+
+    .card-div-footer-textos{
+        font-size: 12px;
+    }
+
+    .grid-seccion .contenedor-principal .card-link .nombre-titular {
+        position:static;
+    }
+
+    .grid-seccion .contenedor-principal .card-link .card-container .card-autor .texto-introductorio-del-autor .texto-oda {
+        @include parametros-margin(0px, 7px, 0px, 7px)
+    }
+
+    .card-obra{
+        @include parametros-margin(0px, 0px, 0px, 67px);
+        position: relative;
+        .contenedor-texto-de-obra{
+            display: none;
+            position: absolute;
+            top: 276px;
+            right: 1px;
+            @include altura-ancho(280px, 332px);
+        }
+    }                            
+
+    #imagen:hover + #contenedor-texto-de-obra {
+        display: block;
+    }
+
+    .obra-mas-conocida-del-autor{
+        position: absolute;
+        right: 90px
+    }
+
+    .contenedor-texto-de-obra{
+        @include altura-ancho(286px, 150px)
+    }
+
+    .grid-seccion .contenedor-principal .card-link .card-container .card-autor .card-obra .contenedor-texto-de-obra .nombre-de-la-obra{
+        @include parametros-margin(18px, 0%, 10px, 38px);
+    }
+
+    .card-autor{
+        @include parametros-margin(0px, 0px, 283px, 0px);
+    }
+
+
+    .grid-seccion .contenedor-principal .card-link .nombre-titular---tertulia {
+        @include altura-ancho(auto, 370px);
+    }
+
+    .card-container---tertulia {
+        @include altura-ancho(auto, 370px);
+    }
+
+    .card-registro {
+        @include altura-ancho(auto, auto);
+    }
+
+    .card-registro .card-datos---registrarse {
+        @include altura-ancho(auto, 355px);
+    }
+
+    .div-contenedor-de-redes-sociales{
+        @include flex-organizacion(row, wrap, normal, flex-start, normal);
+    }
+
+    .redes-sociales{
+        width: 90px;
+    }
+}
 
 @media (min-width: 576px) and (max-width: 767px){
 
@@ -119,10 +249,6 @@
 
     .card-autor{
         @include parametros-margin(0px, 0px, 283px, 0px);
-    }
-
-    #contenedor-de-tertulia{
-        @include altura-ancho(auto, 562px);
     }
 
     .card-container---tertulia {
